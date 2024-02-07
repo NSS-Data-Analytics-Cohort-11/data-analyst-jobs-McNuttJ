@@ -23,3 +23,16 @@ SELECT *
 FROM data_analyst_jobs
 WHERE location IN ('TN','FL');
 --Answer: 65
+
+--Question 4. How many postings in Tennessee have a star rating above 4?
+SELECT COUNT(star_rating)
+FROM data_analyst_jobs
+WHERE location = 'TN'
+AND star_rating > 4.00;
+--Answer: 3
+
+--Question 5. How many postings in the dataset have a review count between 500 and 1000
+SELECT COUNT(review_count)
+FROM data_analyst_jobs
+WHERE review_count BETWEEN 500 AND 1000;
+--Answer: 151
