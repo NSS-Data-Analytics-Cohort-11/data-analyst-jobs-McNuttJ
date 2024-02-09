@@ -70,7 +70,20 @@ GROUP BY company
 ORDER BY AVG(star_rating) DESC;
 --Answer: General Motors; 4.2
 
+--Question 11. Find all the job titles that contain the word 'Analyst'. How many different job titles are there?
+SELECT title
+FROM data_analyst_jobs
+WHERE title LIKE '%Analyst%';
 
+SELECT COUNT(Distinct(title))
+FROM data_analyst_jobs
+WHERE title iLIKE '%Analyst%';
+--Answer: 774
 
-
+--Question 12. How many different job titles do not contain either the word 'Analyst' or the word 'Analytics'? What word do these positions have in common?
+SELECT DISTINCT(title)
+FROM data_analyst_jobs
+WHERE title NOT iLIKE '%Analyst%'
+AND title NOT iLIKE '%Analytics%';
+--Answer: 4
 
