@@ -55,6 +55,20 @@ FROM data_analyst_jobs
 WHERE location = 'CA';
 --Answer: 230
 
+--Question 9. Find the name of each company and its average star rating for all companies that have more than 5000 reviews across all locations. How many companies are there with more than 5000 reviews across all locations?
+SELECT company, AVG(star_rating) AS avg_star_rating
+FROM data_analyst_jobs
+WHERE review_count > 5000
+GROUP BY company;
+--Answer: 41
+
+--Question 10. Add the code to order the query in #9 from highest to lowest average star rating. Which company with more than 5000 reviews across all locations in the dataset has the highest star rating? What is the rating
+SELECT company, AVG(star_rating) AS avg_star_rating
+FROM data_analyst_jobs
+WHERE review_count > 5000
+GROUP BY company
+ORDER BY AVG(star_rating) DESC;
+--Answer: General Motors; 4.2
 
 
 
