@@ -85,5 +85,5 @@ SELECT DISTINCT(title)
 FROM data_analyst_jobs
 WHERE title NOT iLIKE '%Analyst%'
 AND title NOT iLIKE '%Analytics%';
---Answer: 4
+--Answer: 4; They are Tableau specefic.
 
