@@ -44,6 +44,18 @@ GROUP BY location
 ORDER BY avg_rating DESC;
 --Answer: NE
 
+--Question 7. Select unique job titles from the data_analyst_jobs table. How many are there?
+SELECT COUNT(DISTINCT(title))
+FROM data_analyst_jobs;
+--Answer: 881
+
+--Question 8. How many unique job titles are there for California companies?
+SELECT COUNT(DISTINCT(title))
+FROM data_analyst_jobs
+WHERE location = 'CA';
+--Answer: 230
+
+
 
 
 
